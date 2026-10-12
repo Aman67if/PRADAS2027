@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIDAS 2025 | 1st International Conference on Machine Intelligence and Data Science - CUTM</title>
+  
+  <!-- Meta & SEO Tags -->
+  <meta name="description" content="1st International Conference on Machine Intelligence and Data Science (MIDAS-2025) organized by Centurion University of Technology and Management (CUTM), Paralakhemundi, Odisha, India. Hybrid Mode, March 21-22, 2025. Proceedings in Springer CCIS.">
+  <meta name="keywords" content="MIDAS 2025, CUTM, Centurion University, Machine Learning, Data Science, Springer CCIS, Artificial Intelligence, Conference Paralakhemundi">
+  <meta name="author" content="Centurion University of Technology and Management">
+  <meta name="theme-color" content="#1d1d1f">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MIDAS 2025 | International Conference on Machine Intelligence and Data Science">
+  <meta property="og:description" content="Join world-renowned researchers at Centurion University of Technology and Management, Odisha, India. March 21-22, 2025. Hybrid Mode.">
+  <meta property="og:image" content="/images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Inter / SF Pro System Font Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="bg-white text-[#1d1d1f] antialiased selection:bg-[#0066cc] selection:text-white flex flex-col min-h-screen">
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2.5 max-w-sm pointer-events-none"></div>
+
+  <!-- Apple Global Frosted Navigation Header -->
+  <header class="sticky top-0 z-40 w-full glass-nav-light border-b border-[#e0e0e0]/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-[68px]">
+        
+        <!-- Brand / Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <img src="/images/logo.png" alt="logo" class="w-fit h-10 text-white flex items-center justify-center font-bold text-lg tracking-tight shadow-sm transition-transform group-hover:scale-105"/>
+          <div class="flex flex-col">
+            <span class="text-base sm:text-lg font-semibold tracking-tight text-[#1d1d1f] flex items-center gap-1.5">
+              PRADAS <span class="text-[#0066cc]">2027</span>
+            </span>
+            <span class="text-[10px] text-[#7a7a7a] tracking-normal leading-none font-medium hidden sm:block">
+              ICFAI University • Raipur, C.G.
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-[13px] lg:text-[14px]">
+          <!-- Home -->
+          <a href="#home" data-nav-link="home" class="px-3 py-2 rounded-full font-medium transition-colors hover:text-[#0066cc] text-[#1d1d1f]">
+            Home
+          </a>
+
+          <!-- Committee -->
+          <a href="#committee" data-nav-link="committee" class="px-3 py-2 rounded-full font-medium transition-colors hover:text-[#0066cc] text-[#1d1d1f]">
+            Committee
+          </a>
+
+          <!-- Paper Submission Dropdown -->
+          <div class="relative nav-item-dropdown">
+            <button class="px-3 py-2 rounded-full font-medium transition-colors hover:text-[#0066cc] text-[#1d1d1f] flex items-center gap-1 group">
+              <span data-nav-link="paper-submission">Paper Submission</span>
+              <svg class="w-3.5 h-3.5 text-[#7a7a7a] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown absolute left-0 mt-1 w-56 rounded-2xl bg-white shadow-xl border border-[#e0e0e0] p-2 z-50">
+              <a href="#call-for-papers" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <div>
+                  <span class="font-medium block">Call for Papers</span>
+                  <span class="text-[10px] text-[#7a7a7a]">Scope, topics & CCIS info</span>
+                </div>
+              </a>
+              <a href="#author-guidelines" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <div>
+                  <span class="font-medium block">Author Guidelines</span>
+                  <span class="text-[10px] text-[#7a7a7a]">LNCS format & templates</span>
+                </div>
+              </a>
+              <a href="#important-dates" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <div>
+                  <span class="font-medium block">Important Dates</span>
+                  <span class="text-[10px] text-[#7a7a7a]">Deadlines & milestones</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Sponsors -->
+          <div class="relative nav-item-dropdown">
+            <a href="#sponsors" data-nav-link="sponsors" class="px-3 py-2 rounded-full font-medium transition-colors hover:text-[#0066cc] text-[#1d1d1f] flex items-center gap-1 group">
+              <span>Sponsors</span>
+              <svg class="w-3.5 h-3.5 text-[#7a7a7a] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="nav-dropdown absolute left-0 mt-1 w-52 rounded-2xl bg-white shadow-xl border border-[#e0e0e0] p-2 z-50">
+              <a href="#sponsors" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <div>
+                  <span class="font-medium block">Our Sponsors</span>
+                  <span class="text-[10px] text-[#7a7a7a]">Partners & Supporters</span>
+                </div>
+              </a>
+              <a href="#call-for-sponsors-section" class="flex items-center gap-2.5 px-3 py-2.5 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <div>
+                  <span class="font-medium block">Call for Sponsors</span>
+                  <span class="text-[10px] text-[#7a7a7a]">Platinum, Gold, Silver Tiers</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Program Dropdown -->
+          <div class="relative nav-item-dropdown">
+            <a href="#program" data-nav-link="program" class="px-3 py-2 rounded-full font-medium transition-colors hover:text-[#0066cc] text-[#1d1d1f] flex items-center gap-1 group">
+              <span>Program</span>
+              <svg class="w-3.5 h-3.5 text-[#7a7a7a] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <div class="nav-dropdown absolute right-0 sm:left-0 mt-1 w-64 rounded-2xl bg-white shadow-xl border border-[#e0e0e0] p-2 z-50">
+              <a href="#program/keynotes" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <span>Keynote / Plenary Talk</span>
+              </a>
+              <a href="#program/schedule" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <span>Program Schedule</span>
+              </a>
+              <a href="#program/technical" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <span>Technical Sessions</span>
+              </a>
+              <a href="#program/proceedings" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <span>Conference Proceedings</span>
+              </a>
+              <a href="#program/places" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <span>Places to Visit</span>
+              </a>
+              <a href="#program/accommodation" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <span>Accommodation</span>
+              </a>
+              <a href="#program/gallery" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-[#f5f5f7] transition-colors text-xs text-[#1d1d1f]">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc]"></span>
+                <span>Photo Gallery</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Right Side Primary Action Buttons -->
+        <div class="hidden sm:flex items-center gap-2.5">
+          <a href="#login" data-nav-link="login" class="px-3.5 py-1.5 text-xs text-[#1d1d1f] hover:text-[#0066cc] font-medium transition-colors">
+            Login
+          </a>
+          <a href="#registration" data-nav-link="registration" class="apple-pill-btn bg-[#0066cc] text-white hover:bg-[#0071e3] text-xs font-medium py-2 px-4 shadow-sm">
+            Registration
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <div class="flex items-center md:hidden">
+          <button id="mobile-menu-btn" class="p-2 rounded-xl text-[#1d1d1f] hover:bg-[#f5f5f7]" aria-label="Toggle Navigation Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex justify-end">
+    <div class="w-full max-w-xs bg-white h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-[#f0f0f0] mb-6">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-[#1d1d1f] text-white flex items-center justify-center font-bold text-sm">
+              M
+            </div>
+            <span class="font-semibold text-sm text-[#1d1d1f]">MIDAS 2025</span>
+          </div>
+          <button id="close-mobile-drawer" class="p-1.5 rounded-lg text-neutral-500 hover:bg-neutral-100" aria-label="Close menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="space-y-1 text-sm font-medium">
+          <a href="#home" class="block px-3 py-2.5 rounded-xl hover:bg-[#f5f5f7] text-[#1d1d1f]">Home</a>
+          <a href="#committee" class="block px-3 py-2.5 rounded-xl hover:bg-[#f5f5f7] text-[#1d1d1f]">Committee</a>
+          
+          <div class="pt-2 pb-1 px-3 text-[11px] font-semibold uppercase tracking-wider text-[#7a7a7a]">Paper Submission</div>
+          <a href="#call-for-papers" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Call for Papers</a>
+          <a href="#author-guidelines" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Author Guidelines</a>
+          <a href="#important-dates" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Important Dates</a>
+
+          <div class="pt-2 pb-1 px-3 text-[11px] font-semibold uppercase tracking-wider text-[#7a7a7a]">Sponsors</div>
+          <a href="#sponsors" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Our Sponsors</a>
+          <a href="#call-for-sponsors-section" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Call for Sponsors</a>
+
+          <div class="pt-2 pb-1 px-3 text-[11px] font-semibold uppercase tracking-wider text-[#7a7a7a]">Program</div>
+          <a href="#program/keynotes" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Keynote / Plenary Talk</a>
+          <a href="#program/schedule" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Program Schedule</a>
+          <a href="#program/technical" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Technical Sessions</a>
+          <a href="#program/proceedings" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Conference Proceedings</a>
+          <a href="#program/places" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Places to Visit</a>
+          <a href="#program/accommodation" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Accommodation</a>
+          <a href="#program/gallery" class="block px-4 py-2 rounded-xl text-xs hover:bg-[#f5f5f7] text-[#333333]">Photo Gallery</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-[#f0f0f0] space-y-2">
+        <a href="#login" class="block w-full text-center py-2.5 rounded-full border border-[#e0e0e0] text-xs font-medium text-[#1d1d1f]">
+          Portal Login
+        </a>
+        <a href="#registration" class="block w-full text-center py-2.5 rounded-full bg-[#0066cc] text-white text-xs font-medium">
+          Register for MIDAS
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Main Content App Mount Point -->
+  <main id="main-content" class="flex-1">
+    <!-- Populated by src/main.js via client routing -->
+  </main>
+
+  <!-- Permanent Apple Spec Contact Us Footer (On All Pages) -->
+  <footer id="contact-footer" class="bg-[#f5f5f7] border-t border-[#e0e0e0] text-[#333333] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Grid: Institution, Contacts, Links -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#e0e0e0]">
+        
+        <!-- Col 1: About Centurion Univ & MIDAS -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#1d1d1f] text-white flex items-center justify-center font-bold text-base">
+              M
+            </div>
+            <div>
+              <span class="text-base font-semibold text-[#1d1d1f] tracking-tight block">MIDAS-2025</span>
+              <span class="text-xs text-[#7a7a7a]">Machine Intelligence & Data Science</span>
+            </div>
+          </div>
+          <p class="text-xs leading-relaxed text-[#7a7a7a] max-w-sm">
+            Organized by the Department of Computer Science and Engineering, School of Engineering and Technology, Centurion University of Technology and Management (CUTM), Odisha, India.
+          </p>
+          <div class="text-xs text-[#7a7a7a] space-y-1">
+            <div class="flex items-center gap-1.5 font-medium text-[#1d1d1f]">
+              <svg class="w-4 h-4 text-[#0066cc]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Venue Address:</span>
+            </div>
+            <p class="text-[11px] text-[#7a7a7a] pl-5">
+              School of Engineering and Technology, Centurion University of Technology and Management, Paralakhemundi, Gajapati District, Odisha - 761211, India.
+            </p>
+          </div>
+        </div>
+
+        <!-- Col 2: Contact Persons & Coordinates -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-[#1d1d1f]">Contact Persons</h3>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-white rounded-xl border border-[#e0e0e0]">
+              <span class="font-semibold text-[#1d1d1f] block">Prof. (Dr.) Ashok Misra</span>
+              <span class="text-[#7a7a7a] text-[11px] block">Convener, MIDAS-2025</span>
+              <a href="tel:+919937563329" class="text-[#0066cc] hover:underline font-mono text-[11px] mt-1 inline-block">
+                +91 9937563329
+              </a>
+            </div>
+            <div class="p-3 bg-white rounded-xl border border-[#e0e0e0]">
+              <span class="font-semibold text-[#1d1d1f] block">Dr. Abhishek Das</span>
+              <span class="text-[#7a7a7a] text-[11px] block">Program Chair</span>
+              <a href="tel:+917008809932" class="text-[#0066cc] hover:underline font-mono text-[11px] mt-1 inline-block">
+                +91 7008809932
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3: Email & Direct Secretariat -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-[#1d1d1f]">Email Secretariat</h3>
+          <div class="p-4 bg-white rounded-xl border border-[#e0e0e0] space-y-2.5">
+            <span class="text-[11px] text-[#7a7a7a] block">Conference Inquiries:</span>
+            <div class="flex items-center justify-between gap-2">
+              <span class="font-mono text-xs text-[#0066cc] font-medium break-all">midas2024@cutm.ac.in</span>
+              <button data-copy-email="midas2024@cutm.ac.in" class="p-1 rounded text-neutral-400 hover:text-[#0066cc]" title="Copy Email">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              </button>
+            </div>
+            <button data-action="open-contact-modal" class="w-full mt-2 apple-pill-btn bg-[#f5f5f7] hover:bg-[#e0e0e0] text-[#1d1d1f] text-xs py-2">
+              Send Message &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Col 4: Quick Navigation -->
+        <div class="space-y-3 text-xs">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-[#1d1d1f]">Quick Links</h3>
+          <ul class="space-y-2 text-[#7a7a7a]">
+            <li><a href="#call-for-papers" class="hover:text-[#0066cc] transition-colors">Call for Papers</a></li>
+            <li><a href="#author-guidelines" class="hover:text-[#0066cc] transition-colors">Author Guidelines</a></li>
+            <li><a href="#important-dates" class="hover:text-[#0066cc] transition-colors">Important Dates</a></li>
+            <li><a href="#program/keynotes" class="hover:text-[#0066cc] transition-colors">Keynote Speakers</a></li>
+            <li><a href="#program/schedule" class="hover:text-[#0066cc] transition-colors">Program Schedule</a></li>
+            <li><a href="#registration" class="hover:text-[#0066cc] transition-colors">Registration & Fees</a></li>
+            <li><a href="https://cutm.ac.in" target="_blank" rel="noopener noreferrer" class="hover:text-[#0066cc] transition-colors">CUTM Official Website &nearr;</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Legal & Attribution -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#7a7a7a]">
+        <div>
+          &copy; 2025 Centurion University of Technology and Management (CUTM). All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <span>NAAC Grade-A+ University</span>
+          <span>Springer CCIS Series</span>
+          <a href="#home" class="hover:underline text-[#0066cc]">Back to Top &uarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Contact Modal (Direct Inquiry) -->
+  <div id="contact-modal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-[#e0e0e0] relative">
+      <button id="close-contact-modal" class="absolute top-5 right-5 p-1 rounded-full text-[#7a7a7a] hover:bg-[#f5f5f7]">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <h3 class="text-xl font-semibold text-[#1d1d1f] mb-1">Contact MIDAS-2025 Secretariat</h3>
+      <p class="text-xs text-[#7a7a7a] mb-6">Send an inquiry regarding paper submission, sponsorship, or accommodation.</p>
+
+      <form id="footer-contact-form" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-medium text-[#7a7a7a] mb-1">Your Name *</label>
+          <input type="text" required placeholder="Prof. / Dr. / Mr. / Ms." class="w-full px-4 py-2.5 rounded-xl border border-[#e0e0e0] focus:outline-none focus:border-[#0066cc] bg-[#fafafc]" />
+        </div>
+        <div>
+          <label class="block font-medium text-[#7a7a7a] mb-1">Your Email Address *</label>
+          <input type="email" required placeholder="name@institution.edu" class="w-full px-4 py-2.5 rounded-xl border border-[#e0e0e0] focus:outline-none focus:border-[#0066cc] bg-[#fafafc]" />
+        </div>
+        <div>
+          <label class="block font-medium text-[#7a7a7a] mb-1">Subject *</label>
+          <select class="w-full px-4 py-2.5 rounded-xl border border-[#e0e0e0] focus:outline-none focus:border-[#0066cc] bg-[#fafafc]">
+            <option>Paper Submission Query</option>
+            <option>Sponsorship Opportunity</option>
+            <option>Accommodation & Travel Logistics</option>
+            <option>Registration & Payment Clarification</option>
+            <option>General Inquiries</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-medium text-[#7a7a7a] mb-1">Message *</label>
+          <textarea id="contact-message" required rows="3" placeholder="Write your message here..." class="w-full px-4 py-2.5 rounded-xl border border-[#e0e0e0] focus:outline-none focus:border-[#0066cc] bg-[#fafafc]"></textarea>
+        </div>
+        <button type="submit" class="w-full apple-pill-btn bg-[#0066cc] text-white hover:bg-[#0071e3] py-2.5 font-medium">
+          Send Message to Secretariat
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Photo Gallery -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <button id="close-lightbox" class="absolute top-6 right-6 p-2 rounded-full text-white/80 hover:text-white bg-white/10 hover:bg-white/20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button id="prev-lightbox" class="absolute left-6 top-1/2 -translate-y-1/2 p-3 rounded-full text-white/80 hover:text-white bg-white/10 hover:bg-white/20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button id="next-lightbox" class="absolute right-6 top-1/2 -translate-y-1/2 p-3 rounded-full text-white/80 hover:text-white bg-white/10 hover:bg-white/20">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </button>
+    
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl" />
+      <div class="mt-4 text-center text-white">
+        <span id="lightbox-category" class="text-xs uppercase tracking-widest text-[#2997ff] font-semibold block mb-1">Category</span>
+        <h3 id="lightbox-title" class="text-base font-medium">Image Title</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript App Entry -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
