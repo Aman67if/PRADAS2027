@@ -9,18 +9,6 @@
 
 ---
 
-## 📌 GitHub Repository Details
-
-### ⚡ Short Project Description (for GitHub About section)
-```text
-A modern, responsive academic conference portal built with Vite, Tailwind CSS, and Vanilla JavaScript, featuring Apple-inspired aesthetics, client-side routing, live countdown, paper submission guidelines, and event schedules.
-```
-
-### 🏷️ Topic Tags
-`academic-conference` `vite` `tailwindcss` `conference-website` `vanilla-js` `springer-ccis` `paper-submission` `apple-design` `responsive-web-design`
-
----
-
 ## ✨ Features & Pages Overview
 
 ### 1. 🏠 Home Page *(Default)*
