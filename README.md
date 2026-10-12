@@ -107,7 +107,7 @@ Conference project/
 ### 1. Installation
 Clone the repository and install dependencies:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Aman67if/PRADAS2027.git
 cd "Conference project"
 npm install
 ```
